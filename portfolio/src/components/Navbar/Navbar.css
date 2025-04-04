@@ -2,9 +2,17 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-bottom: 0;
 }
 
 a {
+    font-family: 'Kanit-Light';
     text-decoration: none;
-    color: black;
+    color: #FDFAF6;
+}
+
+@font-face {
+    font-family: 'Kanit-Light';
+    src: url(../../assets/fonts/Kanit-Light.ttf) format('truetype');
+    font-weight: 400;
 }
