@@ -1,5 +1,5 @@
 .home-container {
-    display: grid;
+    display: block;
     height: 100vh;
     background-image: radial-gradient(circle, #123458, black);
 }
