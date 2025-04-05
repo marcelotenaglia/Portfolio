@@ -7,8 +7,7 @@ export const Presentation = () => {
     return (
         <div className='presentation-container'>
             <h1>Buenas, soy Marcelo</h1>
-            <p className='studies'>Desarrolador Web, Analista de Datos</p>
-            <p>Soy de San Cayetano, Buenos Aires, Argentina </p>
+            <p className='studies'>Desarrolador Web, Analista de Datos <br /> <span>Soy de San Cayetano, Buenos Aires, Argentina</span></p>
             <div className='social-container'>
                 <p className='social'>@Social</p>
                 <div className='button-container'>

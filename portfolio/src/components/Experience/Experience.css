@@ -1,0 +1,29 @@
+.exp-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25% 0 25%;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+    font: 'Kanit-Light';
+    font-weight: 200;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.exp-icon {
+    font-size: 50px;
+    color: #FDFAF6;
+}
+
+@font-face {
+    font-family: 'Kanit-Light';
+    src: url(../../assets/fonts/Kanit-Light.ttf);
+}

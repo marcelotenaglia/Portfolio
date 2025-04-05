@@ -3,6 +3,9 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%; /* Asegura que ambos ocupen toda la altura del viewport */
+    display: block;
+    height: 100vh;
+    background-image: radial-gradient(circle, #123458, black);
   }
   
   #root {
