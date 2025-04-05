@@ -27,3 +27,26 @@ h1 {
     font-family: 'Kanit-Light';
     src: url(../../assets/fonts/Kanit-Light.ttf);
 }
+
+@media (max-width: 768px) {
+    .exp-container {
+        margin: 0 10% 0 10%;
+    }
+
+    .title-container {
+        padding-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .exp-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}

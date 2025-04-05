@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export const Presentation = () => {
     return (
         <div className='presentation-container'>
-            <h1>Buenas, soy Marcelo</h1>
+            <h1 className='phrase'>Buenas, soy Marcelo</h1>
             <p className='studies'>Desarrolador Web, Analista de Datos <br /> <span>Soy de San Cayetano, Buenos Aires, Argentina</span></p>
             <div className='social-container'>
                 <p className='social'>@Social</p>
