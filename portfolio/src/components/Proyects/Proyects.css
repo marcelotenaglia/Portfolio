@@ -1,0 +1,17 @@
+.proyect-container {
+    display: flex;
+    margin: 0 25% 0 25%;
+    padding-top: 60px;
+}
+
+.proyect-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.proyect-icon {
+    color: #FDFAF6;
+    font-size: 50px;
+}
