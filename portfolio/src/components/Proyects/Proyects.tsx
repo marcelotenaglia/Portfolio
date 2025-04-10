@@ -6,7 +6,7 @@ export const Proyects = () => {
         <div className='proyect-container'>
             <div className='proyect-title'>
                 <RiCodeSSlashFill className='proyect-icon'/>
-                <h1>Proyects</h1>
+                <h1>Proyectos</h1>
             </div>
         </div>
     )

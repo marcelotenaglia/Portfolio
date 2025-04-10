@@ -2,12 +2,21 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+    position: sticky;
+    margin: 10px 35% 0 35%;
+    top: 10px;
+    z-index: 100;
+    background-color: #123458;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+    border: 1px transparent white;
+    border-radius: 25px;
 }
 
 a {
     font-family: 'Kanit-Light';
     text-decoration: none;
     color: #FDFAF6;
+    padding: 5px 0 5px 0;
 }
 
 @font-face {
@@ -19,6 +28,6 @@ a {
 @media (max-width: 768px) {
     .navbar-container {
         gap: 10px;
-        padding: 10px 20px 0 20px;
+        margin: 5px 5% 0 5%;
     }
 }

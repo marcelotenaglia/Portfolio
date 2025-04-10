@@ -8,7 +8,7 @@ export const Footer = () => {
                 <p className='copyright'>© 2025. Casi todos los derechos reservados</p>
             </div>
             <div className='contact-container'>
-            <Link to='#AboutMe'>Sobre mí</Link>
+            <Link to='/AboutMe'>Sobre mí</Link>
             <Link to='https://www.linkedin.com/in/marcelo-tenaglia-0a473b294/'>Contacto</Link>
             </div>
         </div>

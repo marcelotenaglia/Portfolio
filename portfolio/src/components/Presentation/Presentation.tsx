@@ -2,11 +2,13 @@ import './Presentation.css'
 import { VscGithubAlt } from "react-icons/vsc";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import profile from '../../assets/photos/2-removebg-preview.png'
 
 export const Presentation = () => {
     return (
         <div className='presentation-container'>
             <h1 className='phrase'>Buenas, soy Marcelo</h1>
+            <img src={profile} alt="foto-perfil" className='profile-pic'/>
             <p className='studies'>Desarrolador Web, Analista de Datos <br /> <span>Soy de San Cayetano, Buenos Aires, Argentina</span></p>
             <div className='social-container'>
                 <p className='social'>@Social</p>
