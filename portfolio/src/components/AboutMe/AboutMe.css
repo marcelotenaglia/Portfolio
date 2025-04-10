@@ -1,0 +1,17 @@
+.about-container {
+    display: flex;
+    margin: 0 25% 0 25%;
+    padding-top: 60px;
+}
+
+.about-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.about-icon {
+    color: #FDFAF6;
+    font-size: 50px;
+}
