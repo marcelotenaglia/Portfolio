@@ -8,8 +8,10 @@ import Carousel from '../Carousel/Carousel';
 export const Presentation = () => {
     return (
         <div className='presentation-container'>
-            <img src={profile} alt="foto-perfil" className='profile-pic'/>
-            <h1 className='phrase'>Buenas, soy Marcelo</h1>
+            <div className='profile-section'>
+                <img src={profile} alt="foto-perfil" className='profile-pic'/>
+                <h1 className='phrase'>Buenas, soy Marcelo</h1>
+            </div>
             <div className='carousel'>
                 <Carousel autoPlay={true} showButtons={false}/>
             </div>

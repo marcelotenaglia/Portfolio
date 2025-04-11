@@ -3,20 +3,44 @@
     justify-content: center;
     gap: 20px;
     position: sticky;
-    margin: 10px 35% 0 35%;
+    margin: 10px 25% 0 25%;
     top: 10px;
     z-index: 100;
     background-color: #123458;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
-    border: 1px transparent white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 25px;
+    padding: 15px 25px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 a {
     font-family: 'Kanit-Light';
     text-decoration: none;
     color: #FDFAF6;
-    padding: 5px 0 5px 0;
+    padding: 8px 15px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: #FDFAF6;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
 }
 
 @font-face {
@@ -25,9 +49,69 @@ a {
     font-weight: 400;
 }
 
+@media (max-width: 1200px) {
+    .navbar-container {
+        margin: 10px 15% 0 15%;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-container {
+        margin: 10px 10% 0 10%;
+    }
+    
+    a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar-container {
-        gap: 10px;
+        justify-content: center;
         margin: 5px 5% 0 5%;
+        padding: 8px 15px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .navbar-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #123458;
+        flex-direction: column;
+        padding: 10px 0;
+        border-radius: 0 0 25px 25px;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    a {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-container {
+        margin: 5px 3% 0 3%;
+        padding: 8px 12px;
+    }
+
+    .navbar-links {
+        padding: 10px 0;
+    }
+
+    a {
+        font-size: 15px;
+        padding: 10px 0;
     }
 }
