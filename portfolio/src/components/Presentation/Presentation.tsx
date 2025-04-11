@@ -5,18 +5,13 @@ import { Link } from 'react-router-dom';
 import profile from '../../assets/photos/fotoPerfil-removebg-preview.png'
 import Carousel from '../Carousel/Carousel';
 
-
-
 export const Presentation = () => {
-
-    const images = ['1.png', '2.png', '3.png']
-
     return (
         <div className='presentation-container'>
             <img src={profile} alt="foto-perfil" className='profile-pic'/>
             <h1 className='phrase'>Buenas, soy Marcelo</h1>
             <div className='carousel'>
-                <Carousel images={images} autoPlay={true} showButtons={false}/>
+                <Carousel autoPlay={true} showButtons={false}/>
             </div>
             <p className='studies'>Desarrolador Web, Analista de Datos <br /> <span>Soy de San Cayetano, Buenos Aires, Argentina</span></p>
             <div className='social-container'>

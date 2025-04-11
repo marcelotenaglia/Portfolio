@@ -1,25 +1,28 @@
 import { useEffect, useState } from "react";
 import "./Carousel.css"; // Importa el archivo CSS
+import image1 from '../../assets/photos/1.png';
+import image2 from '../../assets/photos/2.png';
+import image3 from '../../assets/photos/3.png';
 
 interface Props {
-  images: string[];
   autoPlay?: boolean;
   showButtons?: boolean;
 }
 
 export default function Carousel(props: Props) {
+  const images = [image1, image2, image3];
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [selectedImage, setSelectedImage] = useState(props.images[0]);
+  const [selectedImage, setSelectedImage] = useState(images[0]);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     if (props.autoPlay || !props.showButtons) {
       const interval = setInterval(() => {  
-        selectNewImage(selectedIndex, props.images);
+        selectNewImage(selectedIndex, images);
       }, 1000);
       return () => clearInterval(interval);
     }
-  }, [props.autoPlay, props.showButtons, selectedIndex, props.images]); // Añadidas dependencias completas
+  }, [props.autoPlay, props.showButtons, selectedIndex, images]);
 
   const selectNewImage = (index: number, images: string[], next = true) => {
     setLoaded(false);
@@ -32,16 +35,17 @@ export default function Carousel(props: Props) {
   };
 
   const previous = () => {
-    selectNewImage(selectedIndex, props.images, false);
+    selectNewImage(selectedIndex, images, false);
   };
 
   const next = () => {
-    selectNewImage(selectedIndex, props.images);
+    selectNewImage(selectedIndex, images);
   };
+
   return (
     <div className="carousel-container"> {/* Contenedor principal opcional */}
       <img
-        src={`../../assets/photos/${selectedImage}`}
+        src={selectedImage}
         alt="Marcelo Tenaglia photos"
         className={`carousel-img ${loaded ? "loaded" : ""}`} // Clases CSS comunes
         onLoad={() => setLoaded(true)}
