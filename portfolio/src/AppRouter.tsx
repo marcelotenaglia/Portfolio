@@ -7,9 +7,9 @@ import { AboutMe } from "./components/AboutMe/AboutMe"
 import { Footer } from "./components/Footer/Footer"
 
 export const AppRouter = () => {
+
     return (
         <>  
-            
             <BrowserRouter>
                 <Navbar />
                 <Presentation />

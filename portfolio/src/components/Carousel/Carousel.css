@@ -1,0 +1,46 @@
+.carousel-container { /* Estilos para el contenedor principal si es necesario */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar elementos horizontalmente si lo deseas */
+  height: 250px; 
+  width: 250px;
+}
+
+.carousel-img {
+  max-width: 500px;
+  width: 100%;
+  height: 250px;
+  opacity: 1;
+  transition: opacity 1s ease-in-out; /* Mejora la transición */
+}
+
+.carousel-img.loaded {
+  opacity: 1;
+}
+
+.carousel-button-container {
+  display: flex;
+  align-items: center; /* Centrar verticalmente los botones */
+  justify-content: center; /* Centrar horizontalmente los botones */
+  margin-top: 15px;
+}
+
+.carousel-button {
+  color: white;
+  background-color: #eb118a;
+  padding: 8px 15px; /* Añade un poco de padding horizontal */
+  margin: 0 10px; /* Aumenta el margen entre botones */
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Añade un poco de redondeo a los botones */
+  font-size: 1rem; /* Tamaño de fuente legible */
+}
+
+.carousel-button:hover {
+  background-color: #d80b7b; /* Oscurecer al pasar el ratón */
+}
+
+.carousel-button:focus {
+  outline: none; /* Evitar el contorno feo por defecto */
+  box-shadow: 0 0 5px rgba(235, 17, 138, 0.5); /* Añadir un resplandor al enfocar */
+}

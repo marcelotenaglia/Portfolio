@@ -5,6 +5,10 @@
     padding: 100px 0 100px 0;
 }
 
+.carousel {
+    display: flex;
+}
+
 h1 {
     color: #FDFAF6;
     font-size: 60px;
@@ -15,7 +19,7 @@ h1 {
 .profile-pic {
     display: block;
     height: 250px;
-    width: 250px;
+    width: 200px;
 }
 
 span {
