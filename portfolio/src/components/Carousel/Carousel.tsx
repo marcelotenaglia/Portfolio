@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import "./Carousel.css"; // Importa el archivo CSS
 import image1 from '../../assets/photos/1.png';
 import image2 from '../../assets/photos/2.png';
@@ -15,16 +15,7 @@ export default function Carousel(props: Props) {
   const [selectedImage, setSelectedImage] = useState(images[0]);
   const [loaded, setLoaded] = useState(false);
 
-  useEffect(() => {
-    if (props.autoPlay || !props.showButtons) {
-      const interval = setInterval(() => {  
-        selectNewImage(selectedIndex, images);
-      }, 1000);
-      return () => clearInterval(interval);
-    }
-  }, [props.autoPlay, props.showButtons, selectedIndex, images]);
-
-  const selectNewImage = (index: number, images: string[], next = true) => {
+  const selectNewImage = useCallback((index: number, images: string[], next = true) => {
     setLoaded(false);
     setTimeout(() => {
       const condition = next ? selectedIndex < images.length - 1 : selectedIndex > 0;
@@ -32,29 +23,53 @@ export default function Carousel(props: Props) {
       setSelectedImage(images[nextIndex]);
       setSelectedIndex(nextIndex);
     }, 500);
-  };
+  }, [selectedIndex]);
 
-  const previous = () => {
+  useEffect(() => {
+    if (props.autoPlay || !props.showButtons) {
+      const interval = setInterval(() => {  
+        selectNewImage(selectedIndex, images);
+      }, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [props.autoPlay, props.showButtons, selectedIndex, images, selectNewImage]);
+
+  const previous = useCallback(() => {
     selectNewImage(selectedIndex, images, false);
-  };
+  }, [selectedIndex, images, selectNewImage]);
 
-  const next = () => {
+  const next = useCallback(() => {
     selectNewImage(selectedIndex, images);
-  };
+  }, [selectedIndex, images, selectNewImage]);
 
   return (
     <div className="carousel-container"> {/* Contenedor principal opcional */}
       <img
         src={selectedImage}
-        alt="Marcelo Tenaglia photos"
+        alt={`Imagen ${selectedIndex + 1} del carrusel`}
         className={`carousel-img ${loaded ? "loaded" : ""}`} // Clases CSS comunes
         onLoad={() => setLoaded(true)}
+        loading="lazy"
+        width="500"
+        height="250"
       />
       <div className="carousel-button-container"> {/* Clase CSS común */}
         {props.showButtons ? (
           <>
-            <button className="carousel-button" onClick={previous}>{"<"}</button> {/* Clase CSS común */}
-            <button className="carousel-button" onClick={next}>{">"}</button> {/* Clase CSS común */}
+            <button 
+              className="carousel-button" 
+              onClick={previous}
+              aria-label="Imagen anterior"
+            >
+              {"<"}
+            </button> {/* Clase CSS común */}
+            <button 
+              className="carousel-button" 
+              onClick={next}
+              aria-label="Imagen siguiente"
+            >
+              {">"}
+            </button> {/* Clase CSS común */}
           </>
         ) : (
           <></>

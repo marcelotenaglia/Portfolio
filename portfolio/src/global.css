@@ -1,11 +1,56 @@
-/* Si creas un nuevo archivo global como src/global.css */
+/* Variables CSS para colores y fuentes */
+:root {
+    --primary-color: #123458;
+    --text-color: #FDFAF6;
+    --accent-color: #4a90e2;
+    --shadow-color: rgba(74, 144, 226, 0.5);
+}
+
+/* Reset y estilos base */
 html, body {
     margin: 0;
     padding: 0;
     display: block;
-    background-image: linear-gradient( #123458, black);
-  }
-  
-  #root {
-    height: auto; /* Asegura que el div#root también ocupe toda la altura */
-  }
+    background-image: linear-gradient(var(--primary-color), black);
+    color: var(--text-color);
+    font-family: 'Kanit-Light', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+    height: auto;
+    min-height: 100vh;
+}
+
+/* Optimización de fuentes */
+@font-face {
+    font-family: 'Kanit-Light';
+    src: url('./assets/fonts/Kanit-Light.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 400;
+}
+
+/* Optimización de imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Mejoras de rendimiento */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Optimización de animaciones */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
