@@ -15,7 +15,7 @@ export default function Carousel(props: Props) {
   const [selectedImage, setSelectedImage] = useState(images[0]);
   const [loaded, setLoaded] = useState(false);
 
-  const selectNewImage = useCallback((index: number, images: string[], next = true) => {
+  const selectNewImage = useCallback((selectedIndex: number, images: string[], next = true) => {
     setLoaded(false);
     setTimeout(() => {
       const condition = next ? selectedIndex < images.length - 1 : selectedIndex > 0;

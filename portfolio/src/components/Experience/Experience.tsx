@@ -1,9 +1,13 @@
 import './Experience.css'
 import { MdShoppingBag } from "react-icons/md";
 
-export const Experience = () => {
+interface Props {
+    id?: string
+}
+
+export const Experience: React.FC<Props> = ({ id }) => {
     return (
-        <div className="exp-container">
+        <div id={id} className="exp-container">
             <div className='title-container'>
                 <MdShoppingBag className='exp-icon'/>
                 <h1>Experiencia laboral</h1>

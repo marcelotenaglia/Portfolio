@@ -16,10 +16,10 @@ export const Navbar = () => {
                 {isMenuOpen ? <FaTimes /> : <FaBars />}
             </button>
             <div className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
-                <Link to='' onClick={() => setIsMenuOpen(false)}>Experiencia</Link>
-                <Link to='' onClick={() => setIsMenuOpen(false)}>Proyectos</Link>
-                <Link to='' onClick={() => setIsMenuOpen(false)}>Sobre mí</Link>
-                <Link to='' onClick={() => setIsMenuOpen(false)}>Contacto</Link>
+                <a href='#experience' onClick={() => setIsMenuOpen(false)}>Experiencia</a>
+                <a href='#proyects' onClick={() => setIsMenuOpen(false)}>Proyectos</a>
+                <a href='#aboutme' onClick={() => setIsMenuOpen(false)}>Sobre mí</a>
+                <Link to='https://www.linkedin.com/in/marcelo-tenaglia-0a473b294/' onClick={() => setIsMenuOpen(false)}>Contacto</Link>
             </div>
         </div>
     );

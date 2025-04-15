@@ -13,9 +13,9 @@ export const AppRouter = () => {
             <BrowserRouter>
                 <Navbar />
                 <Presentation />
-                <Experience />
-                <Proyects />
-                <AboutMe />
+                <Experience id='experience' />
+                <Proyects id='proyects' />
+                <AboutMe id='aboutme' />
                 <Footer />
             </BrowserRouter>
         </>
