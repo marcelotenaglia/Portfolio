@@ -3,7 +3,11 @@ import { RiCodeSSlashFill } from "react-icons/ri";
 import { ProjectCard } from './ProjectCard';
 import proyect1 from '../../assets/photos/dashboard.png';
 
-export const Proyects = () => {
+interface Props {
+    id?: string
+}
+
+export const Proyects: React.FC<Props> = ({id}) => {
     const projects = [
         {
             title: "Análisis precios gas",
@@ -15,7 +19,7 @@ export const Proyects = () => {
     ];
 
     return (
-        <div className='proyect-container'>
+        <div id={id} className='proyect-container'>
             <div className='proyect-title'>
                 <RiCodeSSlashFill className='proyect-icon'/>
                 <h1>Proyectos</h1>
